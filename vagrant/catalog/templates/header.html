@@ -1,0 +1,10 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="{{url_for('showCategories')}}">Movie Categories</a>
+  <form class="form-inline">
+      {%if 'username' not in session %}
+      <a href="{{url_for('showLogin')}}" class="btn btn-outline-success my-2 my-sm-0">Login</a>
+      {% else %}
+      <a href="">Logout </a>
+      {% endif %}
+  </form>
+</nav>

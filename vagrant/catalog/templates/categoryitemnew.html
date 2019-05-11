@@ -1,0 +1,33 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class='container'>
+    <h1>Add Item</h1>
+    <form action="#" method="POST" class="was-validated">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+            </div>
+            <input name="name" type="text" class="form-control is-invalid" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder = 'input name' required>
+        </div>
+        <div class="input-group mb-3">
+            <textarea name="description" class="form-control is-invalid" aria-label="With textarea" placeholder="input description" required></textarea>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Category</label>
+            </div>
+            <select name="category_name" class="custom-select" id="inputGroupSelect01" required>
+                <option selected value="">Choose...</option>
+                {% for i in categories %}
+                <option value="{{i.name}}">{{i.name}}</option>
+                {% endfor %}
+            </select>
+            <div class="invalid-feedback">Selete category</div>
+        </div>
+        <button type="submit" class="btn btn-primary" id=sumbit>Submit</button>
+    </form>
+</div>
+
+{% endblock %}

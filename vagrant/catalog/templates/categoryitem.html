@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class='container'>
+    <strong class="d-inline-block mb-2 text-primary">{{item.category.name}}</strong> 
+    <h2 class="mb-0">{{item.name}}</h2>
+    <br>
+    <p class="card-text mb-auto">{{item.description}}</p>
+    <br>
+    <a role="button" class="btn btn-outline-primary" href="{{url_for('editCategoryItem', category_name=item.category.name, item_id=item.id)}}">Edit</a>
+    <a role="button" class="btn btn-outline-danger" href="{{url_for('deleteCategoryItem', category_name=item.category.name, item_id=item.id)}}">Delete</a>
+</div>
+
+{% endblock %}
