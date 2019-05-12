@@ -66,6 +66,9 @@ horror_items = [
 
 if __name__ == '__main__':
     create_category(movie_cateogry_list)
+    categories = session.query(Category).all()
+    for x in categories:
+        print(x.name)
     create_sampe_user("Jay Pritchett", "jay_pritchett@example.com", "https://sample.com/hello.png")
     insert_movie_items("COMEDY", comedy_items)
     insert_movie_items("SCI-FI", scifi_items)
