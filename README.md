@@ -20,7 +20,7 @@
 
 ## How to run the application
 
-### macOS (Preffered)
+### macOS (Prefered)
 
 1. `git clone https://github.com/trilliwon/Catalog.git`
 2. `cd Catalog/vagrant/catalog`
