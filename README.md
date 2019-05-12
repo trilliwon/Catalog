@@ -40,6 +40,7 @@
 7. `python3 create_sample_data.py`
 8. `python3 app.py`
 
+#### Important
 > When using vagrant, there's a problem with connect `localhost:5000` from browser. With host `0.0.0.0:5000`, I am able to access from browser. But in this case, **I could not able to login to google**.
 
 
