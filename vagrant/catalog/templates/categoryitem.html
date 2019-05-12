@@ -8,8 +8,10 @@
     <br>
     <p class="card-text mb-auto">{{item.description}}</p>
     <br>
+    {% if is_loggedin %}
     <a role="button" class="btn btn-outline-primary" href="{{url_for('editCategoryItem', category_name=item.category.name, item_id=item.id)}}">Edit</a>
     <a role="button" class="btn btn-outline-danger" href="{{url_for('deleteCategoryItem', category_name=item.category.name, item_id=item.id)}}">Delete</a>
+    {%endif%}
 </div>
 
 {% endblock %}
